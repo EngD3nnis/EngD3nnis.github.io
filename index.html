@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#e6e3db">
+<meta name="description" content="AI Engineer · Machine Learning Engineer · Intelligent Systems">
+<meta name="color-scheme" content="light dark">
+<title>Dennis Muhanji - DNX</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23141311'/%3E%3Ccircle cx='16' cy='16' r='5' fill='%23ba1f24'/%3E%3C/svg%3E">
+<link rel="alternate" type="application/rss+xml" title="DNX Blog" href="/blog/feed.xml">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="scaffold" aria-hidden="true"></div>
+
+<main class="sheet">
+
+  <div class="top"></div>
+
+  <div class="body">
+    <h1>
+      <span class="l"><span>Dennis</span></span>
+      <span class="l"><span>Muhanji</span></span>
+      <span class="l"><span class="alt">DNX</span></span>
+    </h1>
+
+    <ul class="index">
+      <li><a class="row" style="--c:#ba1f24" href="/blog/" rel="noopener noreferrer">
+        <span class="num">01</span>
+        <span class="name">blog</span>
+        <span class="meta"><span class="host">/blog</span>
+          <span class="arw"><svg viewBox="0 0 48 12" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M0 6h20m-6-5 6 5-6 5M24 6h20m-6-5 6 5-6 5"/></svg></span>
+        </span>
+      </a></li>
+      <li><a class="row" style="--c:#8d9a92" href="https://twitter.com/_dxnnoh" target="_blank" rel="noopener noreferrer">
+        <span class="num">02</span>
+        <span class="name">twitter</span>
+        <span class="meta"><span class="host">@_dxnnoh</span>
+          <span class="arw"><svg viewBox="0 0 48 12" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M0 6h20m-6-5 6 5-6 5M24 6h20m-6-5 6 5-6 5"/></svg></span>
+        </span>
+      </a></li>
+      <li><a class="row" style="--c:#8b7269" href="https://discord.com/users/1470193503731580961" target="_blank" rel="noopener noreferrer">
+        <span class="num">03</span>
+        <span class="name">discord</span>
+        <span class="meta"><span class="host">EngD3nnis</span>
+          <span class="arw"><svg viewBox="0 0 48 12" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M0 6h20m-6-5 6 5-6 5M24 6h20m-6-5 6 5-6 5"/></svg></span>
+        </span>
+      </a></li>
+      <li><a class="row" style="--c:#2b2a26" href="https://github.com/EngD3nnis" target="_blank" rel="noopener noreferrer">
+        <span class="num">04</span>
+        <span class="name">github</span>
+        <span class="meta"><span class="host">EngD3nnis</span>
+          <span class="arw"><svg viewBox="0 0 48 12" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M0 6h20m-6-5 6 5-6 5M24 6h20m-6-5 6 5-6 5"/></svg></span>
+        </span>
+      </a></li>
+      <li><a class="row" style="--c:#5e6f78" href="https://www.linkedin.com/in/dennismuhanji/" target="_blank" rel="noopener noreferrer">
+        <span class="num">05</span>
+        <span class="name">linkedin</span>
+        <span class="meta"><span class="host">dennismuhanji</span>
+          <span class="arw"><svg viewBox="0 0 48 12" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M0 6h20m-6-5 6 5-6 5M24 6h20m-6-5 6 5-6 5"/></svg></span>
+        </span>
+      </a></li>
+      <li><a class="row" style="--c:#4a6741" href="mailto:muhanjidennisdnx@gmail.com">
+        <span class="num">06</span>
+        <span class="name">email</span>
+        <span class="meta"><span class="host">muhanjidennisdnx</span>
+          <span class="arw"><svg viewBox="0 0 48 12" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M0 6h20m-6-5 6 5-6 5M24 6h20m-6-5 6 5-6 5"/></svg></span>
+        </span>
+      </a></li>
+    </ul>
+  </div>
+
+  <footer class="colophon">
+    <div>AI Engineer · Machine Learning · Intelligent Systems</div>
+    <div>student @ <a href="https://www.uonbi.ac.ke/" target="_blank" rel="noopener noreferrer">UoN</a></div>
+  </footer>
+
+</main>
+
+<script>
+(function(){
+
+/* --- Accent color per row --- */
+(function(){
+  var root = document.documentElement;
+  var meta = document.querySelector('meta[name="theme-color"]');
+  var rows = [].slice.call(document.querySelectorAll('.row'));
+  var accents = rows.map(function(r){ return r.style.getPropertyValue('--c').trim(); });
+  var base = accents[Math.floor(Math.random() * accents.length)];
+
+  function setAccent(c){ root.style.setProperty('--accent', c); }
+  function syncTheme(){ meta.setAttribute('content', getComputedStyle(document.body).backgroundColor); }
+
+  setAccent(base);
+  syncTheme();
+
+  var mq = window.matchMedia('(prefers-color-scheme: dark)');
+  (mq.addEventListener ? mq.addEventListener.bind(mq, 'change') : mq.addListener.bind(mq))(syncTheme);
+
+  rows.forEach(function(row, i){
+    function on(){ setAccent(accents[i]); }
+    function off(){ setAccent(base); }
+    row.addEventListener('mouseenter', on);
+    row.addEventListener('focus', on);
+    row.addEventListener('mouseleave', off);
+    row.addEventListener('blur', off);
+  });
+})();
+
+/* --- Scaffold (decorative grid strings) --- */
+(function(){
+  var host = document.querySelector('.scaffold');
+  var sheet = document.querySelector('.sheet');
+  var NS = 'http://www.w3.org/2000/svg';
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  var SEG = 20;
+  var REACH = 250;
+  var LEAN = 22;
+  var strings = [], W = 0, H = 0;
+
+  var svg = document.createElementNS(NS, 'svg');
+  svg.setAttribute('preserveAspectRatio', 'none');
+  host.appendChild(svg);
+
+  function build(){
+    var r = host.getBoundingClientRect();
+    if (!r.width || !r.height) return;
+    W = r.width; H = r.height;
+    svg.setAttribute('viewBox', '0 0 ' + W + ' ' + H);
+
+    var n = window.innerWidth < 760 ? 6 : 12;
+    var gut = parseFloat(getComputedStyle(sheet).paddingLeft);
+    var col = (W - (n - 1) * gut) / n;
+
+    svg.textContent = '';
+    strings = [];
+    for (var i = 0; i < n; i++){
+      var s = {
+        x: Math.round(i * (col + gut)) + 0.5,
+        phase: i * 1.71,
+        bow: 0, v: 0, bowY: H / 2, target: 0, targetY: H / 2,
+        ln: document.createElementNS(NS, 'path'),
+        hot: document.createElementNS(NS, 'path')
+      };
+      s.ln.setAttribute('class', 'ln');
+      s.hot.setAttribute('class', 'hot');
+      svg.appendChild(s.ln);
+      svg.appendChild(s.hot);
+      strings.push(s);
+    }
+    if (reduce) draw(0);
+  }
+
+  function disp(s, y, t){
+    var v = s.bow * Math.exp(-Math.pow((y - s.bowY) / (H * 0.36), 2));
+    v += 0.5 * Math.sin(t * 0.8 + s.phase);
+    return v * Math.sin(Math.PI * y / H);
+  }
+
+  function draw(t){
+    for (var i = 0; i < strings.length; i++){
+      var s = strings[i];
+      s.v = (s.v + (s.target - s.bow) * 0.028) * 0.75;
+      s.bow += s.v;
+      s.bowY += (s.targetY - s.bowY) * 0.055;
+
+      var d = '';
+      for (var j = 0; j <= SEG; j++){
+        var y = j * H / SEG;
+        d += (j ? ' L ' : 'M ') + (s.x + (reduce ? 0 : disp(s, y, t))).toFixed(2) + ',' + y.toFixed(1);
+      }
+      s.ln.setAttribute('d', d);
+      s.hot.setAttribute('d', d);
+      s.hot.style.opacity = reduce ? 0
+        : Math.min(0.85, (Math.abs(s.bow) / LEAN + Math.abs(s.v) * 0.12) * 0.9).toFixed(3);
+    }
+  }
+
+  build();
+
+  var rt;
+  window.addEventListener('resize', function(){ clearTimeout(rt); rt = setTimeout(build, 150); });
+
+  if (reduce) return;
+
+  var raf;
+  function loop(now){ draw(now / 1000); raf = requestAnimationFrame(loop); }
+  raf = requestAnimationFrame(loop);
+
+  document.addEventListener('visibilitychange', function(){
+    cancelAnimationFrame(raf);
+    if (!document.hidden) raf = requestAnimationFrame(loop);
+  });
+
+  document.addEventListener('pointermove', function(e){
+    if (e.pointerType === 'touch') return;
+    var r = host.getBoundingClientRect();
+    var mx = e.clientX - r.left, my = e.clientY - r.top;
+    for (var i = 0; i < strings.length; i++){
+      var s = strings[i], u = (mx - s.x) / REACH;
+      s.target = LEAN * u * Math.exp(-3 * u * u) / 0.2476;
+      s.targetY = Math.max(0, Math.min(H, my));
+    }
+  }, {passive: true});
+
+  document.addEventListener('pointerleave', function(){
+    for (var i = 0; i < strings.length; i++) strings[i].target = 0;
+  });
+})();
+
+})();
+</script>
+</body>
+</html>

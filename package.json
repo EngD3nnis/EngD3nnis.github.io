@@ -1,0 +1,12 @@
+{
+  "name": "dnx-site",
+  "private": true,
+  "scripts": {
+    "build": "node build.js",
+    "dev": "node build.js && npx -y serve dist"
+  },
+  "devDependencies": {
+    "marked": "^15.0.0",
+    "gray-matter": "^4.0.3"
+  }
+}
