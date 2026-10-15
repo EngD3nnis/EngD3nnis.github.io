@@ -7,6 +7,7 @@ const { marked } = require('marked');
 const POSTS_DIR = path.join(__dirname, 'posts');
 const DIST_DIR = path.join(__dirname, 'dist');
 const BLOG_DIR = path.join(DIST_DIR, 'blog');
+const JOURNAL_PATH = path.join(__dirname, 'partials', 'journal.html');
 const SITE_URL = 'https://engd3nnis.github.io';
 const SITE_TITLE = 'DNX';
 
@@ -76,17 +77,26 @@ function blogIndexPage(posts) {
     </li>`;
   }).join('\n');
 
+  if (!fs.existsSync(JOURNAL_PATH)) {
+    throw new Error(`Missing journal partial: ${JOURNAL_PATH}`);
+  }
+  const journal = fs.readFileSync(JOURNAL_PATH, 'utf8').trimEnd();
+
   const body = `<div class="page">
   <a class="back" href="/">← DNX</a>
-  <h1>Blog</h1>
-  <p class="lede">Notes on AI engineering, mathematics, machine learning, and building things.</p>
+  <h1>Engineer Dennis</h1>
+  <p class="lede">Dennis Muhanji (DNX) — Data Science undergraduate at the University of Nairobi. This is my engineering journal: what I'm building, what I'm learning, and how I think about the work.</p>
+
+${journal}
+
+  <h2 class="label">Journal</h2>
   <ul class="posts">
 ${listItems}
   </ul>
   <a class="rss" href="/blog/feed.xml">RSS feed ↗</a>
 </div>`;
 
-  return htmlShell('Blog', body, { description: 'DNX blog — AI engineering, mathematics, and machine learning notes.', cssPath: '../style.css' });
+  return htmlShell('Blog', body, { description: "Dennis Muhanji (DNX) — engineering journal. AI, machine learning, quantitative systems, and software built from first principles.", cssPath: '../style.css' });
 }
 
 function postPage(post, prevPost, nextPost) {

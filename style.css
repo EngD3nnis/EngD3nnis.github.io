@@ -218,6 +218,30 @@ a:focus-visible{outline:1px solid var(--accent);outline-offset:4px}
 .article pre{margin:1.5em 0;padding:1.2em 1.4em;background:var(--rule);border-radius:4px;overflow-x:auto;-webkit-overflow-scrolling:touch}
 .article pre code{background:none;padding:0;font-size:.82em;line-height:1.55;color:var(--ink)}
 
+/* --- Journal (profile on /blog/) --- */
+.journal{margin-top:clamp(32px,6vw,56px)}
+.label{
+  font-family:var(--mono);font-size:.78em;font-weight:400;
+  letter-spacing:.16em;text-transform:uppercase;color:var(--ink-60);
+  margin:2.8em 0 .9em;padding-top:.95em;border-top:1px solid var(--rule);
+}
+.journal>.label:first-child{margin-top:0;padding-top:0;border-top:0}
+.projects{list-style:none;margin:0 0 1.2em;padding:0}
+.projects li{padding:.85em 0;border-bottom:1px solid var(--rule)}
+.projects li:first-child{border-top:1px solid var(--rule)}
+.projects .pname{font-weight:600;letter-spacing:-.01em}
+.projects .ptech{
+  display:block;font-family:var(--mono);font-size:.78em;
+  color:var(--ink-60);letter-spacing:.02em;margin:.18em 0 .35em;
+}
+.projects p{margin:0}
+.contact-links{
+  list-style:none;display:flex;flex-wrap:wrap;gap:.5em 1.6em;
+  margin:0;padding:0;font-family:var(--mono);font-size:.8em;
+}
+.contact-links a{color:var(--ink-60);text-decoration:none;transition:color .25s var(--ease)}
+.contact-links a:hover,.contact-links a:focus-visible{color:var(--accent)}
+
 /* --- Post navigation (prev/next) --- */
 .post-nav{display:flex;justify-content:space-between;gap:1em;margin-top:3em;padding-top:1.2em;border-top:1px solid var(--rule)}
 .post-nav a{font-family:var(--mono);font-size:.8em;color:var(--ink-60);text-decoration:none;transition:color .25s var(--ease)}
