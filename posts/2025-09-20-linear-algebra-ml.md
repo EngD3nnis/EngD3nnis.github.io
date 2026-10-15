@@ -3,6 +3,10 @@ title: "Linear Algebra You Actually Need for ML"
 date: 2025-09-20
 excerpt: "Vectors, matrices, eigenvalues — what matters and what doesn't when building ML systems."
 slug: linear-algebra-ml
+subject: mathematics
+type: essay
+tags: [linear-algebra, matrices, machine-learning]
+related: [gradient-descent, building-from-scratch]
 ---
 
 Every machine learning textbook starts with a linear algebra chapter. Most of them cover too much. Here's what you actually need, and why.

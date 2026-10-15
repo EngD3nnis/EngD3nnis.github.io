@@ -3,6 +3,10 @@ title: "Building a Neural Network from Scratch"
 date: 2026-01-10
 excerpt: "A feedforward network in pure NumPy — forward pass, backprop, and training loop with nothing hidden."
 slug: building-from-scratch
+subject: data-science
+type: worked-problem
+tags: [neural-networks, backpropagation, numpy]
+related: [gradient-descent, linear-algebra-ml]
 ---
 
 Frameworks hide the mechanics. That's useful for production, but dangerous for understanding. Here's a neural network built with nothing but NumPy.

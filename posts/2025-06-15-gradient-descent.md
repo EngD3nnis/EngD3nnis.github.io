@@ -3,6 +3,10 @@ title: "Gradient Descent from First Principles"
 date: 2025-06-15
 excerpt: "The geometry and math behind gradient descent — from intuition to a working implementation."
 slug: gradient-descent
+subject: mathematics
+type: derivation
+tags: [optimization, calculus, implementation]
+related: [building-from-scratch, linear-algebra-ml]
 ---
 
 Every optimization algorithm in machine learning traces back to one idea: move downhill. Gradient descent is that idea made precise.
